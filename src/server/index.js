@@ -705,6 +705,7 @@ function update(delta) {
     for(let i of Object.keys(players)){
       players[i].ws.close(1000);
     }
+    players = {};
   }
 }
 let lastTime = 0;
