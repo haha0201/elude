@@ -646,8 +646,8 @@ function update(delta) {
   if (!updated) {
     enemies = {};
     players = {};
-    wave = 9 //0;
-    waveTime = 0; //10;
+    wave = 0 //0;
+    waveTime = 10; //10;
     inWave = false;
   } else {
     waveTime -= delta / 1000;
