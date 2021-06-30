@@ -397,51 +397,51 @@ function spawnWave(wave){
     spawnEnemy("normal", 10, 30, 350);
   }
   else if (wave == 2){
-    waveTime = 15;
+    waveTime = 10;
     spawnEnemy("normal", 20, 30, 350);
   }
   else if (wave == 3){
-    waveTime = 15;
-    spawnEnemy("normal", 10, 30, 350);
-    spawnEnemy("dasher", 10, 30, 350);
+    waveTime = 10;
+    spawnEnemy("normal", 9, 30, 350);
+    spawnEnemy("dasher", 9, 30, 150);
   }
   else if (wave == 4){
     waveTime = 15;
-    spawnEnemy("normal", 6, 30, 400);
-    spawnEnemy("dasher", 6, 30, 400);
-    spawnEnemy("normal", 5, 60, 250);
-    spawnEnemy("dasher", 5, 60, 250);
+    spawnEnemy("normal", 5, 25, 400);
+    spawnEnemy("dasher", 5, 25, 200);
+    spawnEnemy("normal", 4, 50, 250);
+    spawnEnemy("dasher", 4, 50, 150);
   }
   else if (wave == 5){
-    waveTime = 20;
-    spawnEnemy("normal", 90, 15, 150);
+    waveTime = 15;
+    spawnEnemy("normal", 70, 15, 150);
   }
   else if (wave == 6){
-    waveTime = 20;
-    spawnEnemy("normal", 50, 15, 150);
-    spawnEnemy("dasher", 50, 15, 100);
+    waveTime = 15;
+    spawnEnemy("normal", 30, 15, 150);
+    spawnEnemy("dasher", 30, 15, 100);
     
   }
   else if (wave == 7){
     waveTime = 20;
-    spawnEnemy("dasher", 50, 25, 200);
+    spawnEnemy("dasher", 30, 20, 200);
   }
   else if (wave == 8){
     waveTime = 20;
-    spawnEnemy("switch", 50, 25, 300);
+    spawnEnemy("switch", 40, 25, 250);
   }
   else if (wave == 9){
     waveTime = 20;
     spawnEnemy("switch", 20, 15, 150);
-    spawnEnemy("normal", 20, 25, 500);
+    spawnEnemy("normal", 20, 25, 350);
     
   }
   else if (wave == 10){
     waveTime = 30;
-    spawnEnemy("switch", 35, 25, 250);
-    spawnEnemy("normal", 15, 25, 150);
-    spawnEnemy("normal", 4, 70, 200);
-    spawnEnemy("dasher", 4, 70, 200);
+    spawnEnemy("switch", 25, 20, 250);
+    spawnEnemy("normal", 10, 20, 150);
+    spawnEnemy("normal", 3, 60, 200);
+    spawnEnemy("dasher", 3, 60, 200);
     
   }
   else if (wave == 11){
@@ -646,13 +646,13 @@ function update(delta) {
   if (!updated) {
     enemies = {};
     players = {};
-    wave = 0 //0;
-    waveTime = 20; //15;
+    wave = 9 //0;
+    waveTime = 0; //10;
     inWave = false;
   } else {
     waveTime -= delta / 1000;
     if (waveTime < 0){
-      waveTime = 5;
+      waveTime = 3;
       inWave = !inWave;
       if (inWave){
         wave ++;
