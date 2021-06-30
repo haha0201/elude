@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap");
+html,body{
+  margin:0;
+  padding:0;
+  background-color:rgb(20,20,20);
+  font-family: 'Exo 2';font-size: 22px;
+}
+#menu{
+  position: absolute;
+  display:flex;
+  justify-content:center; 
+  align-items:center;
+  height: 100%;
+  width: 100%;
+  min-height: 20vh;
+  font-family: 'Exo 2';
+  
+}
+.playContainer{
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+#playButton{
+  font-size:1.1rem;
+  width:5.6rem;
+  height:2.2rem;
+  border:none;
+  outline:none;
+  color:#0e0e0e;
+  background-color: rgb(206, 206, 206);
+  transition: all 0.5s ease;
+  border-radius: 0.3rem;
+  font-family: 'Exo 2';
+}
+#playButton:hover{
+  background-color: rgb(172, 197, 197);
+  cursor: pointer;
+  color:#000000;
+}
+.inner{
+  width: 50%;
+  display: block;
+  background-color: rgb(60, 60, 60);
+  text-align: center;
+  border-radius: 12px;
+  color: rgb(168, 168, 168);
+}
+.logo{
+  color: rgb(168, 168, 168);
+  font-size: 60px;
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: none;
+  line-height: 0px;
+}
+.made{
+  font-size: 20px;
+}
+canvas{
+  position:absolute;
+  left:0;
+  top:0;
+}
+#nameBox {
+  font-family: 'Exo 2';
+  padding: 1px;
+  font-size: 25px;
+  color: #1f1633;
+  background-color: rgba(241, 239, 239, 0.575);
+  width: 50%;
+  text-align: left;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+
+  /*text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;*/
+  /*border: 1px solid #cccccc;*/
+  /* box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;*/
+  outline: none;
+  border:none;
+}
+#nameBox:focus {
+  border-color: rgba(82, 169, 236, 0.971);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,
+    50 50 50px rgba(82, 169, 236, 0.909);
+  outline: 0 none;
+}

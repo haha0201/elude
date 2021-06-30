@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+
+    <link href="style.css" rel="stylesheet" type="text/css" type='text/css'/>
+    
+  </head>
+  <body>
+    <div id="menu">
+      <div class="inner">
+        <h1 class="logo">Elude</h1>
+        <h2 class="made">by haha0201</h2>
+        <input
+        id="nameBox"
+        type="text"
+        placeholder="Nickname"
+        autocomplete="off"
+        maxlength="20"
+        spellcheck="false"
+        />
+        <div class="playContainer">
+        <button id="playButton">
+          Play
+        </button>
+        </div>
+      </div>
+    </div>
+    <div id="game" style="display: none">
+    <canvas id="canvas" width=1600 height=900></canvas>
+    <script src="script.js"></script>
+    </div>
+  </body>
+</html>
