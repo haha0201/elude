@@ -590,7 +590,8 @@ wss.on("connection", ws => {
           enemyPack: enemyInitPacks,
           waveTime: Math.trunc(waveTime),
           wave: wave,
-          inWave: inWave
+          inWave: inWave,
+          selfId: clientId
         }))
         }
       }

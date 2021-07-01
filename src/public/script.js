@@ -16,6 +16,7 @@ var mouseMove = false;
 var mouseLock = false;
 
 var clickLock = false;
+var selfId = null;
 
 const menuDiv = document.getElementById("menu");
 const gameDiv = document.getElementById("game");
@@ -247,12 +248,19 @@ function update(){
         else{
           ctx.fillStyle = "rgb(0, 0, 0)";
         }
+        if (player.id != selfId){
+          ctx.globalAlpha = 0.4;
+        }
+        else{
+          ctx.globalAlpha = 1;
+        }
         ctx.beginPath();
         ctx.arc(player.x, player.y, player.radius, 0, Math.PI * 2);
         ctx.fill();
         ctx.fillText(player.name, player.x, player.y - 30)
       
       }
+      ctx.globalAlpha = 1;
       for(let i of Object.keys(enemies)){
         const enemy = enemies[i];
         enemy.update(delta);
@@ -327,6 +335,7 @@ ws.addEventListener("message", ( datas ) => {
     waveTime = msg.waveTime;
     wave = msg.wave;
     inWave = msg.inWave;
+    selfId = msg.selfId;
   }
   else if (msg.type == "leave"){
     delete players[msg.id];
